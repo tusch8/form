@@ -1,0 +1,8 @@
+.form {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding-bottom: 300px;
+  text-align: center;
+  margin-inline: auto;
+}
