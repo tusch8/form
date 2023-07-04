@@ -14,7 +14,6 @@ $mode = "input";
 if (isset($_POST["back"] ) && $_POST["back"]) {
 
 	// 修正するボタン押したとき
-
 } elseif (isset($_POST["confirm"] ) && $_POST["confirm"]) {
 
 	// 確認ページ
@@ -27,7 +26,7 @@ if (isset($_POST["back"] ) && $_POST["back"]) {
 	isset($_POST['email_conf']) ? $_SESSION["email_conf"] = mb_convert_kana(h($_POST['email_conf']), "rna") : $_SESSION["email_conf"] = "";
 	if (isset($_POST['tel'])) {
 		$post_tel = h($_POST['tel']);
-		$post_tel = mb_ereg_replace("ー", "-", $post_tel); // 全角ハイフンを置き換え(ハイフンには色々種類があるが他は知らん)
+		$post_tel = mb_ereg_replace("ー", "-", $post_tel);
 		$post_tel = mb_ereg_replace("－", "-", $post_tel);
 		$_SESSION["tel"] = mb_convert_kana($post_tel, "rna");
 	} else {
